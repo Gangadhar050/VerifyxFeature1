@@ -4,6 +4,7 @@ import com.verify_x.dto.TechnicalSkillDto;
 import com.verify_x.dto.TechnicalSkillResponseDto;
 import com.verify_x.dto.UpdateTechnicalSkillRequestDto;
 import com.verify_x.entity.Candidate;
+import com.verify_x.enums.AppliedRole;
 import com.verify_x.enums.TechnicalSkill;
 import com.verify_x.exception.BadRequestException;
 import com.verify_x.exception.ResourceNotFoundException;
@@ -339,7 +340,7 @@ public class CandidateSkillServiceImpl
 //VALIDATE SKILLS AGAINST ROLE
     private void validateSkillsBelongToRole(
             List<TechnicalSkill> skills,
-            Candidate.AppliedRole role) {
+            AppliedRole role) {
 
         if (skills == null || skills.isEmpty()) {
             return;
@@ -380,7 +381,7 @@ public class CandidateSkillServiceImpl
 
  //ROLE RECOMMENDATIONS
     private List<TechnicalSkill> getRecommendations(
-            Candidate.AppliedRole role) {
+            AppliedRole role) {
 
         if (role == null) {
 

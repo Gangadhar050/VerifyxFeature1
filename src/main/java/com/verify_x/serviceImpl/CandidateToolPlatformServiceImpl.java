@@ -5,6 +5,7 @@ import com.verify_x.dto.ToolPlatformResponseDto;
 import com.verify_x.dto.UpdateToolPlatformRequestDto;
 import com.verify_x.entity.Candidate;
 
+import com.verify_x.enums.AppliedRole;
 import com.verify_x.enums.ToolPlatform;
 import com.verify_x.exception.BadRequestException;
 import com.verify_x.exception.ResourceNotFoundException;
@@ -338,7 +339,7 @@ public ToolPlatformResponseDto updateToolPlatforms(
 //role validation
     private void validateToolsBelongToRole(
             List<ToolPlatform> tools,
-            Candidate.AppliedRole role) {
+            AppliedRole role) {
 
         if (tools == null || tools.isEmpty()) {
             return;
@@ -379,7 +380,7 @@ public ToolPlatformResponseDto updateToolPlatforms(
 
     //role recommendation
     private List<ToolPlatform> getRecommendations(
-            Candidate.AppliedRole role) {
+            AppliedRole role) {
 
         if (role == null) {
 

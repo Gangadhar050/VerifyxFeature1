@@ -1,6 +1,6 @@
 package com.verify_x.dto;
 
-import com.verify_x.entity.Candidate;
+import com.verify_x.enums.AppliedRole;
 import com.verify_x.enums.CandidateType;
 
 import jakarta.validation.constraints.Email;
@@ -9,7 +9,6 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.*;
 
-import java.util.List;
 
 @Getter
 @Setter
@@ -47,7 +46,7 @@ public class CandidateProfileDto {
     private String aadhaarNumber;
 
     @NotNull(message = "Applied Role is required")
-    private Candidate.AppliedRole appliedRole;
+    private AppliedRole appliedRole;
 
     @NotNull(message = "Candidate Type is required")
     private CandidateType candidateType;

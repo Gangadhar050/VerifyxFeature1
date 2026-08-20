@@ -1,6 +1,7 @@
 package com.verify_x.dto;
 
 import com.verify_x.entity.Candidate;
+import com.verify_x.enums.AppliedRole;
 import com.verify_x.enums.CandidateType;
 
 import jakarta.validation.constraints.Email;
@@ -51,7 +52,7 @@ public class UserRegistrationDto {
 
 
     @NotNull(message = "Applied role is required")
-    private Candidate.AppliedRole appliedRole;
+    private AppliedRole appliedRole;
 
 
 

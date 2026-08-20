@@ -6,7 +6,7 @@ public enum AppliedRole {
 
     BACKEND_DEVELOPER,
 
-    FULLSTACK_DEVELOPER,
+    FULL_STACK_DEVELOPER,
 
     DATA_ANALYST,
 
