@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: my-springboot-app
+    runtime: docker
+    plan: free
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod

@@ -1,0 +1,41 @@
+VERIFYX BACKEND - INTELLIJ LOCAL RUN GUIDE
+==========================================
+
+1. Extract this ZIP.
+2. Open the folder containing pom.xml in IntelliJ IDEA.
+3. Select Java 21 as the Project SDK.
+4. Allow Maven to download/import dependencies.
+5. Run the main class under src/main/java (the class annotated with @SpringBootApplication).
+
+LOCAL DEFAULTS
+--------------
+Backend URL: http://localhost:8080
+Swagger: http://localhost:8080/swagger-ui/index.html
+H2 Console: http://localhost:8080/h2-console
+H2 JDBC URL: jdbc:h2:file:./data/verifyx-local-db
+H2 username: sa
+H2 password: leave blank
+
+Default HR login:
+Email: admin@verifyx.com
+Password: Admin@123
+
+The default setup uses a persistent local H2 database, so MySQL is not required.
+The database is created automatically in the project's data folder.
+
+FRONTEND
+--------
+The supplied Vite frontend already defaults to http://localhost:8080.
+Run it with npm install and npm run dev. It normally opens on http://localhost:5173.
+CORS is configured for both localhost:5173 and localhost:3000.
+
+OPTIONAL MYSQL
+--------------
+To use MySQL, add this IntelliJ Program argument:
+--spring.profiles.active=mysql
+
+Then set environment variables, for example:
+DB_USERNAME=root
+DB_PASSWORD=your_actual_mysql_password
+
+The MySQL database verifyx_db is automatically created when the MySQL user has permission.
