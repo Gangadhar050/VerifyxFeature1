@@ -21,6 +21,7 @@ import java.util.Set;
 @Builder
 public class Candidate {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -36,14 +37,6 @@ public class Candidate {
 
     @Column(nullable = false)
     private String password;
-
-    public enum AppliedRole {
-        FRONTEND_DEVELOPER,
-        BACKEND_DEVELOPER,
-        FULL_STACK_DEVELOPER,
-        DATA_ANALYST,
-        DEVOPS_ENGINEER,
-        QA_ENGINEER }
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

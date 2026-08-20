@@ -5,6 +5,7 @@ import com.verify_x.entity.Admin;
 import com.verify_x.entity.Candidate;
 import com.verify_x.entity.PendingRegistration;
 import com.verify_x.enums.ApplicationStatus;
+import com.verify_x.enums.AppliedRole;
 import com.verify_x.enums.Role;
 import com.verify_x.exception.EmailAlreadyExistsException;
 import com.verify_x.exception.UserAlreadyExistsException;
@@ -167,9 +168,8 @@ public class AuthServiceImpl implements AuthService {
 
                         .phoneNumber(pending.getPhoneNumber())
                         .password(pending.getPassword())
-
                         .appliedRole(
-                                Candidate.AppliedRole.valueOf(pending.getAppliedRole()))
+                                AppliedRole.valueOf(pending.getAppliedRole()))
 
                         .candidateType(pending.getCandidateType())
                         .role(Role.CANDIDATE)

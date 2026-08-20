@@ -1,7 +1,6 @@
 package com.verify_x.dto;
 
-
-import com.verify_x.entity.Candidate;
+import com.verify_x.enums.AppliedRole;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -19,7 +18,7 @@ public class ToolPlatformResponseDto {
 
     private Long candidateId;
 
-    private Candidate.AppliedRole appliedRole;
+    private AppliedRole appliedRole;
 
     private List<ToolPlatformDto> tools;
 }

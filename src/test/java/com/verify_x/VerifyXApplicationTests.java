@@ -9,5 +9,4 @@ class VerifyXApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
